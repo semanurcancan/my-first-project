@@ -1,0 +1,129 @@
+{
+  "debts": [
+    {
+      "name": "yıldız can",
+      "debt": 2500,
+      "id": 1,
+      "instData": 6,
+      "payData": 500
+    },
+    {
+      "name": "semanur can",
+      "id": 2,
+      "debt": 2500,
+      "instData": 6,
+      "payData": 400
+    },
+    {
+      "name": "ahmet yılmaz",
+      "debt": 2000,
+      "id": 3,
+      "instData": 6,
+      "payData": 300
+    },
+    {
+      "name": "ahmet yılgın",
+      "debt": 2500,
+      "instData": 3,
+      "payData": 340,
+      "id": 7
+    },
+    {
+      "name": "muhsin arslan",
+      "debt": 2500,
+      "instData": 6,
+      "payData": 400,
+      "id": 9
+    },
+    {
+      "name": "güneş yıldız",
+      "debt": 3000,
+      "instData": 4,
+      "payData": 200,
+      "id": 10
+    },
+    {
+      "name": "aycan aköz",
+      "debt": 2000,
+      "instData": 2,
+      "payData": 500,
+      "id": 11
+    },
+    {
+      "name": "aycan aköz",
+      "debt": 2000,
+      "instData": 4,
+      "payData": 250,
+      "id": 12
+    },
+    {
+      "name": "muhsin yörük",
+      "debt": 5000,
+      "instData": 3,
+      "payData": 350,
+      "id": 13
+    }
+  ],
+  "semanur": [
+    {
+      "name": "salih",
+      "id": "1",
+      "lastName": "akz"
+    },
+    {
+      "name": "mehmet",
+      "id": "2",
+      "lastName": "kose"
+    },
+    {
+      "name": "asil",
+      "id": "3",
+      "lastName": "yılmaz"
+    },
+    {
+      "name": "nilay",
+      "id": "4",
+      "lastName": "yıldız"
+    },
+    {
+      "name": "fatmanur",
+      "id": "5",
+      "lastName": "akça"
+    },
+    {
+      "name": "emre",
+      "id": "6",
+      "lastName": "akça"
+    },
+    {
+      "name": "fefe",
+      "lastName": "hnjmö",
+      "id": "L9KW7do"
+    },
+    {
+      "name": "semanur aköz",
+      "lastName": "hnjmö",
+      "id": "kyzBSFy"
+    },
+    {
+      "name": "semanur aköz",
+      "lastName": "hnjmö",
+      "id": "0cS6r3E"
+    },
+    {
+      "name": "semanur aköz",
+      "lastName": "hnjmö",
+      "id": "LQn-7Ur"
+    },
+    {
+      "name": "semanur aköz",
+      "lastName": "can",
+      "id": "ihrQ5_n"
+    },
+    {
+      "name": "fefe",
+      "lastName": "hnjmö",
+      "id": "M7ICaoS"
+    }
+  ]
+}
