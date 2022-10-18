@@ -1,7 +1,5 @@
 <template>
 <div>
-  <v-card>
-  </v-card>
 <v-container>
     <v-card class="cardContainer">
       <v-col>
@@ -90,6 +88,9 @@ export default {
 .cardContainer {
   height: auto;
   width: 600px;
+   box-shadow: 0px  9px 20px #b79ef3;
+  border-radius: 8px;
+  color: rgb(94, 94, 94);
 }
 .eee {
   width: 100px;

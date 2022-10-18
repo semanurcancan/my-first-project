@@ -38,6 +38,11 @@ export default {
   margin-top: 5px;
   display: inline-block;
 }
+.nav-link:hover{
+    box-shadow: 0px 5px 10px #99c3f3;
+  border-radius: 8px;
+  color: rgb(94, 94, 94);
+}
 .active {
   box-shadow: 0px 5px 10px #b79ef3;
   border-radius: 8px;

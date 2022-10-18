@@ -62,6 +62,13 @@
       "instData": 3,
       "payData": 350,
       "id": 13
+    },
+    {
+      "name": "engin cancan",
+      "debt": 5000,
+      "instData": 9,
+      "payData": 2500,
+      "id": 14
     }
   ],
   "semanur": [
@@ -124,6 +131,11 @@
       "name": "fefe",
       "lastName": "hnjmö",
       "id": "M7ICaoS"
+    },
+    {
+      "name": "test",
+      "lastName": "can",
+      "id": "zF-5IXu"
     }
   ]
 }
