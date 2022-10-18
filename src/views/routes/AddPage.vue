@@ -3,8 +3,13 @@
     <v-main>
       <h1 class="display-2 font-weight-bold mb-3 text-center">Customer List</h1>
       <div class="container">
-        <UserSection :userApi="userApi" @addUser="addUser" />
-        <HelloWorld :userApi="userApi" />
+        <v-card>
+          <UserSection :userApi="userApi" @addUser="addUser" />
+        </v-card>
+        <br>
+        <v-card>
+          <HelloWorld :userApi="userApi" />
+        </v-card>
       </div>
     </v-main>
   </v-app>
@@ -48,9 +53,8 @@ export default {
 };
 </script>
 <style>
-.container{
+.container {
   margin-inline: 120px;
   padding-left: 8px;
 }
-
 </style>

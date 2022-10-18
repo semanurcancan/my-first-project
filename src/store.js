@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+import axios from "axios";
 
 const store = createStore({
   state: {
@@ -12,7 +13,6 @@ const store = createStore({
     },
     theme: "dark",
     permissons: [1, 2, 3, 4, 5],
-    userList: ["ayse", "fatma", "hakan", "cemil"],
     itemList: [
       { id: 1, title: "masa", type: "mobilya" },
       { id: 2, title: "sandalye", type: "mobilya" },
@@ -20,6 +20,7 @@ const store = createStore({
       { id: 4, title: "monitor", type: "elektronik" },
       { id: 5, title: "bardak", type: "züccaciye" },
     ],
+    items: [],
   },
   getters: {
     woodItems: (state) => state.itemList.filter((i) => i.type === "mobilya"),
@@ -30,6 +31,23 @@ const store = createStore({
       delete user.password;
       return user;
     },
+    items: (state) => {
+      console.log(state.items);
+      return state.items;
+    },
+  },
+  mutations: {
+    setUsers(state, payload) {
+      state.items = payload;
+    },
+  },
+  actions: {
+    setUsers(context) {
+      axios.get("http://localhost:3000/debts").then((items) => {
+        context.commit("setUsers", items.data);
+      });
+    },
   },
 });
+
 export default store;

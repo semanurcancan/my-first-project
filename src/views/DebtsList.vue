@@ -9,55 +9,55 @@
           <th class="text-left">PEŞİNAT</th>
         </tr>
       </thead>
-      <tbody v-for="user in debtList" :key="user.id" @click="
-          this.$router.push({ name: 'UserDetail', params: { id: user.id } })
-        ">
-        <tr>
-          <td>{{ user.name }}</td>
-          <td>{{ user.debt }}</td>
-          <td>{{ user.instData }}</td>
-          <td>{{ user.payData }}</td>
-        </tr>
-      </tbody>
+      <div v-if="debtList != {}">
+        <tbody
+          v-for="user in debtList"
+          :key="user.id"
+          @click="
+            this.$router.push({ name: 'UserDetail', params: { id: user.id } })
+          "
+        >
+          <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.debt }}</td>
+            <td>{{ user.instData }}</td>
+            <td>{{ user.payData }}</td>
+          </tr>
+        </tbody>
+      </div>
     </v-table>
   </v-container>
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
+import store from "@/store";
 
 export default {
-    name: "DebtList",
+  name: "DebtList",
 
   data() {
     return {
       item: {},
-      debtList: {},
-      listItem: [
-        {
-          name: "ahmet yılmaz",
-          debt: 159,
-          installment: 3,
-        },
-        {
-          name: "engin can",
-          debt: 237,
-          installment: 5,
-        },
-        {
-          name: "fatmanur can",
-          debt: 2346,
-          installment: 2,
-        },
-      ],
+      debtList: store.getters.items,
     };
   },
-  created: function () {
-    axios.get("http://localhost:3000/debts").then((res) => {
-      this.debtList = res.data;
-      console.log(res.data);
-    });
+  mounted() {
+    this.$store.dispatch("setUsers");
+    // this.debtList = this.$store.getters.items;
+    // console.log("sema", this.debtList);
+    // console.log(store);
   },
+  watch: {
+    debtList() {
+      console.log(this.debtList);
+    },
+  },
+  // function () {
+  //   axios.get("http://localhost:3000/debts").then((res) => {
+  //     this.debtList = res.data;
+  //   });
+  // },
 };
 </script>
 

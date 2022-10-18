@@ -2,7 +2,7 @@
   <div>
     <h1 class="title">
       <span class="font-weight-light">InTime</span>
-      <span class="ınfo">Info</span>
+      <span class="font-weight-thin ">Info</span>
     </h1>
     <v-card class="card">
       <v-title class="text-center">Biz Kimiz ?</v-title>
@@ -35,7 +35,7 @@
         </li>
       </ul>
     </v-card>
-
+    <br>
     <v-card class="card">
       Müşteri memnuniyetini temel ilke edinmiş Intime Info, müşterilerinin
       sorunlarını alanında uzman ekibi ile hızlı bir şekilde çözmektedir.
@@ -84,6 +84,7 @@ export default {
 <style>
 .title {
   text-align: center;
+  font-size: 20px;
 }
 .card {
   margin-inline: 200px;

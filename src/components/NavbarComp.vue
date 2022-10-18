@@ -1,9 +1,9 @@
 <template>
-  <nav>
-    <v-toolbar :elevation="4" app>
-      <v-toolbar-title class="text-uppercase text-grey">
+  <nav >
+    <v-toolbar  :elevation="4" app>
+      <v-toolbar-title class="text-grey text-xl-caption text-h4">
         <span class="font-weight-light">InTime</span>
-        <span>Info</span>
+        <span class="ınfo">INFO</span>
       </v-toolbar-title>
       <router-link class="nav-link" active-class="active" to="/"
         >HOME</router-link
@@ -47,5 +47,20 @@ export default {
   box-shadow: 0px 5px 10px #b79ef3;
   border-radius: 8px;
   color: rgb(94, 94, 94);
+}
+.ınfo {
+  animation: color-change 2s infinite;
+}
+@keyframes color-change {
+  80% {
+    color: #8958fab2;
+  }
+  80% {
+    color: #58c7fab2;
+  }
+ 
+   50% {
+    color: #bf58fab2;
+  }
 }
 </style>

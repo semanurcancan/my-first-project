@@ -1,6 +1,6 @@
 <template>
-  <v-container id="app" class="">
-    <v-col class="grid">
+  <v-container id="app" class="grid">
+    <v-col >
       <v-row
         v-for="user in userApi"
         :key="user.id"
@@ -29,6 +29,6 @@ export default {
 .grid {
   border: 2px solid lightblue;
   box-shadow: 0px 5px 8px #8958fab2;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 </style>

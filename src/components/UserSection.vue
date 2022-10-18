@@ -7,7 +7,7 @@
             id="name"
             v-model="nameData"
             placeholder="name"
-            class="border-sm h-16"
+            class="input"
         /></v-col>
         <v-col>
           <input
@@ -15,11 +15,11 @@
             id="lastName"
             v-model="lastNamedata"
             placeholder="lastName"
-            class="border-sm"
+            class="input"
           />
         </v-col>
         <v-col>
-          <v-btn @click="checkInfo">Add Customer</v-btn>
+          <v-btn class="btn" @click="checkInfo">Add Customer</v-btn>
         </v-col>
       </v-row>
   </v-card>
@@ -51,8 +51,15 @@ export default {
 .info {
 display: flex;
 align-items: center
- 
+}
+.btn{
+  width: 100px;
+font-size: 11px;}
 
+.input{
+   border: 1px solid lightblue;
+   border-radius: 5px;
+   width: 100px;
 }
 .box2 {
   border: 2px solid lightblue;
@@ -61,7 +68,7 @@ align-items: center
   align-items: center;
   justify-content: center;
   column-gap: 10px;
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 10px;
 }
 </style>
