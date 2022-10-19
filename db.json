@@ -1,88 +1,123 @@
 {
   "debts": [
     {
-      "name": "yıldız can",
+      "name": "YILDIZ CAN",
       "debt": 2700,
       "id": 1,
       "instData": 6,
       "payData": 500
     },
     {
-      "name": "semanur can",
+      "name": "SEMANUR CAN",
       "id": 2,
       "debt": 2500,
       "instData": 2,
       "payData": 400
     },
     {
-      "name": "ahmet yılmaz",
+      "name": "AHMET YILMAZ",
       "debt": 2000,
       "id": 3,
       "instData": 7,
       "payData": 300
     },
     {
-      "name": "ahmet yılgın",
+      "name": "AHMET YILGIN",
       "debt": 2300,
       "instData": 3,
       "payData": 340,
       "id": 7
     },
     {
-      "name": "muhsin arslan",
+      "name": "MUHSİN ARSLAN",
       "debt": 2800,
       "instData": 6,
       "payData": 400,
       "id": 9
     },
     {
-      "name": "güneş yıldız",
+      "name": "GÜNEŞ YILDIZ",
       "debt": 3000,
       "instData": 4,
       "payData": 200,
       "id": 10
     },
     {
-      "name": "aycan aköz",
+      "name": "AYCAN AKÖZ",
       "debt": 3400,
       "instData": 2,
       "payData": 500,
       "id": 11
     },
     {
-      "name": "aycan aköz",
+      "name": "ŞEYMA SUBAŞI",
       "debt": 4350,
       "instData": 4,
       "payData": 250,
       "id": 12
     },
     {
-      "name": "muhsin yörük",
+      "name": "TARKAN TEVETOĞLU",
       "debt": 5000,
       "instData": 3,
       "payData": 350,
       "id": 13
     },
     {
-      "name": "engin cancan",
+      "name": "ENGİN CANCAN",
       "debt": 4600,
       "instData": 9,
       "payData": 2500,
       "id": 14
     },
     {
-      "name": "ayşegül güneş",
+      "name": "AYŞEGÜL GÜNEŞ",
       "debt": 3670,
       "instData": 8,
       "payData": 340,
       "id": 15
     },
     {
-      "name": "mehriye kopuk",
+      "name": "MEHTİYE KOPUK",
       "debt": 5970,
       "instData": 5,
       "payData": 2100,
       "id": 16
+    },
+    {
+      "name": "JALE DE JALE",
+      "debt": 9876,
+      "instData": 5,
+      "payData": 386,
+      "id": 17
+    },
+    {
+      "name": "AYSE GÜLER",
+      "debt": 6300,
+      "instData": 9,
+      "payData": 450,
+      "id": 18
+    },
+    {
+      "name": "GÜLDEN ATASEVER",
+      "debt": 5890,
+      "instData": 5,
+      "payData": 1090,
+      "id": 19
+    },
+    {
+      "name": "RABIE AKÇA",
+      "debt": 2345,
+      "instData": 5,
+      "payData": 564,
+      "id": 20
+    },
+    {
+      "name": "DALE DON DALE",
+      "debt": 5678,
+      "instData": 8,
+      "payData": 679,
+      "id": 21
     }
   ],
   "semanur": [

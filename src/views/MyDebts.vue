@@ -22,7 +22,10 @@
         </tr>
       </tbody>
     </v-table>
+    <router-view></router-view>
+
   </v-container>
+
 </template>
 
 <script>

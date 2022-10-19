@@ -11,6 +11,7 @@
               placeholder="ad-soyad"
               type="text"
               v-model="nameData"
+              
             />
           </v-col>
         </v-row>
@@ -71,7 +72,7 @@ export default {
   },
   methods: {
     routePas() {
-      axios.post("http://localhost:3000/debts",{name: this.nameData, debt: this.debtData, instData:this.instData, payData:this.payData}).then(res=>{this.$router.push({ name: 'MyDebts', params: { id:res.data.id}});} )
+      axios.post("http://localhost:3000/debts",{name: this.nameData.toUpperCase(), debt: this.debtData, instData:this.instData, payData:this.payData}).then(res=>{this.$router.push({ name: 'MyDebts', params: { id:res.data.id}});} )
       console.log(this.nameData);
     },
   },
