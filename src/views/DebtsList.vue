@@ -12,16 +12,22 @@
         <thead>
           <tr>
             <th class="text-left">BORÇLU</th>
-            <th class="text-left" @click="sortData('debt')">
-              <v-icon> {{ iconData("debt") }}</v-icon>
+            <th
+              class="text-left"
+              @click="
+                sortData('debt');
+                showIcon();
+              "
+            >
+              <v-icon v-if="!isHidden"> {{ iconData("debt") }}</v-icon>
               ÖDENECEK TUTAR
             </th>
-            <th class="text-left" @click="sortData('instData')">
-              <v-icon> {{ iconData("instData") }}</v-icon
+            <th class="text-left" @click="sortData('instData'); showIcon();">
+              <v-icon v-if="!isHidden"> {{ iconData("instData") }}</v-icon
               >TAKSİT
             </th>
-            <th class="text-left" @click="sortData('payData')">
-              <v-icon> {{ iconData("payData") }}</v-icon
+            <th class="text-left" @click="sortData('payData'); showIcon();">
+              <v-icon v-if="!isHidden"> {{ iconData("payData") }}</v-icon
               >PEŞİNAT
             </th>
           </tr>
@@ -59,6 +65,7 @@ export default {
       searchText: "",
       sort: true,
       sortType: "",
+      isHidden: true,
       sortArr: [
         {
           name: "ÖDENECEK TUTAR",
@@ -88,6 +95,13 @@ export default {
         console.log("engin");
         console.log(this.sort);
       }
+    },
+    showIcon() {
+      // if(this.isHidden){
+      // this.isHidden = false
+      // }
+      (this.isHidden = this.isHidden == true ? false : false),
+        console.log("ne", this.isHidden);
     },
     iconData(value) {
       if (this.sortType == value && this.sort) {
