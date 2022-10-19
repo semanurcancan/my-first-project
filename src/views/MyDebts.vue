@@ -1,6 +1,6 @@
 <template>
   <v-container class="debtContainer">
-    <v-table theme="dark">
+    <v-table class="table">
       <thead>
         <tr>
           <th class="text-left">BORÇLU</th>
@@ -47,6 +47,12 @@ export default {
 </script>
 
 <style>
+.table {
+  background-color: rgba(245, 245, 245, 0.267);
+  border: 2px solid rgb(195, 173, 230);
+  border-radius: 5px;
+  text-decoration: rgb(5, 5, 5);
+}
 .debtContainer {
   height: auto;
   width: auto;

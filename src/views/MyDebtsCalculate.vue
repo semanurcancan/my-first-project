@@ -70,12 +70,6 @@ export default {
     });
   },
   methods: {
-    //  setInfo(){
-    //   if(this.nameData && this.debtData){
-    //     this.$emit('addInfo', {name: this.nameData, debt: this.debtData})
-    //     console.log(nameData)
-    //   }
-    // },
     routePas() {
       axios.post("http://localhost:3000/debts",{name: this.nameData, debt: this.debtData, instData:this.instData, payData:this.payData}).then(res=>{this.$router.push({ name: 'MyDebts', params: { id:res.data.id}});} )
       console.log(this.nameData);

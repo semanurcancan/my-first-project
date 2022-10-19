@@ -15,12 +15,6 @@
     <br />
     <v-card class="card">
       <ul>
-        <li v-for="user in $store.state.userList" :key="user">{{ user }}</li>
-      </ul>
-    </v-card>
-    <br />
-    <v-card class="card">
-      <ul>
         <li v-for="(item, index) in woodItems" :key="index">
           {{ item.title }}
         </li>

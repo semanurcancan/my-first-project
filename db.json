@@ -2,7 +2,7 @@
   "debts": [
     {
       "name": "yıldız can",
-      "debt": 2500,
+      "debt": 2700,
       "id": 1,
       "instData": 6,
       "payData": 500
@@ -11,26 +11,26 @@
       "name": "semanur can",
       "id": 2,
       "debt": 2500,
-      "instData": 6,
+      "instData": 2,
       "payData": 400
     },
     {
       "name": "ahmet yılmaz",
       "debt": 2000,
       "id": 3,
-      "instData": 6,
+      "instData": 7,
       "payData": 300
     },
     {
       "name": "ahmet yılgın",
-      "debt": 2500,
+      "debt": 2300,
       "instData": 3,
       "payData": 340,
       "id": 7
     },
     {
       "name": "muhsin arslan",
-      "debt": 2500,
+      "debt": 2800,
       "instData": 6,
       "payData": 400,
       "id": 9
@@ -44,14 +44,14 @@
     },
     {
       "name": "aycan aköz",
-      "debt": 2000,
+      "debt": 3400,
       "instData": 2,
       "payData": 500,
       "id": 11
     },
     {
       "name": "aycan aköz",
-      "debt": 2000,
+      "debt": 4350,
       "instData": 4,
       "payData": 250,
       "id": 12
@@ -65,10 +65,24 @@
     },
     {
       "name": "engin cancan",
-      "debt": 5000,
+      "debt": 4600,
       "instData": 9,
       "payData": 2500,
       "id": 14
+    },
+    {
+      "name": "ayşegül güneş",
+      "debt": 3670,
+      "instData": 8,
+      "payData": 340,
+      "id": 15
+    },
+    {
+      "name": "mehriye kopuk",
+      "debt": 5970,
+      "instData": 5,
+      "payData": 2100,
+      "id": 16
     }
   ],
   "semanur": [
