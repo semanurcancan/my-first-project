@@ -12,7 +12,6 @@
         <thead>
           <tr>
             <th class="text-left">BORÇLU</th>
-
             <th
               v-for="(item, index) in sortArr"
               :key="index"
@@ -60,7 +59,6 @@ export default {
       searchText: "",
       sort: true,
       sortType: "",
-      isHidden: true,
       sortArr: [
         {
           name: "ÖDENECEK TUTAR",
@@ -86,12 +84,9 @@ export default {
       if (this.sort) {
         this.debtList.sort((a, b) => (a[`${value}`] > b[`${value}`] ? 1 : -1));
         this.sort = false;
-        console.log("sort", this.sort);
       } else {
         this.debtList.sort((a, b) => (a[`${value}`] > b[`${value}`] ? -1 : 1));
         this.sort = true;
-        console.log("engin");
-        console.log(this.sort);
       }
     },
     showIcon(index) {
