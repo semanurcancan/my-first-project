@@ -49,17 +49,17 @@ export default {
   color: rgb(94, 94, 94);
 }
 .ınfo {
-  animation: color-change 2s infinite;
+  animation: color-change 3s infinite;
 }
 @keyframes color-change {
   80% {
     color: #8958fab2;
   }
-  80% {
+  20% {
     color: #58c7fab2;
   }
  
-   50% {
+   0% {
     color: #bf58fab2;
   }
 }
