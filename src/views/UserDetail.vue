@@ -8,7 +8,7 @@
           müşteri numarası: {{ $route.params.id }}
         </h3>
       </div>
-      <router-link class="backBtn" to="/debtCmp/debtList"
+      <router-link class="backBtn" to="/debtCmp/myDebtsCalculate"
         ><v-icon>mdi-keyboard-backspace</v-icon></router-link
       ></v-card
     >

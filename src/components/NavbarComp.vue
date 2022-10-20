@@ -14,6 +14,9 @@
       <router-link class="nav-link" active-class="active" to="/add"
         >NEW CUSTOMER</router-link
       >
+       <router-link class="nav-link" active-class="active" to="/DragDrop"
+        >DRAG & DROP</router-link
+      >
     </v-toolbar>
   </nav>
 </template>

@@ -1,13 +1,13 @@
 <template>
   <nav>
     <router-link class="nav-link" active-class="active" to="/debtCmp/myDebtsCalculate"
-      >BORÇ EKLE/HESAPLA</router-link
+      >ADD/CALCULATE DEBT</router-link
     >
      <router-link class="nav-link" active-class="active" to="/debtCmp/myDebts/:id"
-      >KİŞİSEL BORÇ SAYFASI</router-link
+      >PERSONAL DEBT PAGE</router-link
     >
     <router-link class="nav-link" active-class="active" to="/debtCmp/debtList"
-      > BORÇLU LİSTESİ </router-link
+      >DEBT LIST</router-link
     >
    
     <router-view></router-view>

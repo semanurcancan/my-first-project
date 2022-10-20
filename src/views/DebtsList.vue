@@ -11,7 +11,7 @@
       <v-table class="table">
         <thead>
           <tr>
-            <th class="text-left">BORÇLU</th>
+            <th class="text-left">DEBTOR</th>
             <th
               v-for="(item, index) in sortArr"
               :key="index"
@@ -61,17 +61,17 @@ export default {
       sortType: "",
       sortArr: [
         {
-          name: "ÖDENECEK TUTAR",
+          name: "DEBT",
           type: "debt",
           isVisible: false,
         },
         {
-          name: "TAKSİT",
+          name: "INSTALLMENT",
           type: "instData",
           isVisible: false,
         },
         {
-          name: "PEŞİNAT",
+          name: "ADVANCE PAYMENTT",
           type: "payData",
           isVisible: false,
         },

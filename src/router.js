@@ -16,6 +16,11 @@ const routes = [
     path: "/add/:id",
     component: () => import("./views/UserDetail.vue"),
   },
+  {
+    name: "DragDrop",
+    path: "/DragDrop", //nasıl gıdecek
+    component: () => import("./DragDrop/DragDropHome.vue"), //bunu ne karşılayacak
+  },
 
 
   {

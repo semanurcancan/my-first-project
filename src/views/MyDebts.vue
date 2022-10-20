@@ -3,10 +3,10 @@
     <v-table class="table">
       <thead>
         <tr>
-          <th class="text-left">BORÇLU</th>
-          <th class="text-left">ÖDENECEK TUTAR</th>
-          <th class="text-left">TAKSİT</th>
-          <th class="text-left">PEŞİNAT</th>
+          <th class="text-left">DEBTOR</th>
+          <th class="text-left">DEBT</th>
+          <th class="text-left">INSTALLMENT</th>
+          <th class="text-left">ADVANCE PAYMENT</th>
         </tr>
       </thead>
       <tbody v-for="user in debtList"
