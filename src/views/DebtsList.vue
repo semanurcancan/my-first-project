@@ -12,23 +12,18 @@
         <thead>
           <tr>
             <th class="text-left">BORÇLU</th>
+
             <th
+              v-for="(item, index) in sortArr"
+              :key="index"
               class="text-left"
               @click="
-                sortData('debt');
-                showIcon();
+                sortData(item.type);
+                showIcon(index);
               "
             >
-              <v-icon v-if="!isHidden"> {{ iconData("debt") }}</v-icon>
-              ÖDENECEK TUTAR
-            </th>
-            <th class="text-left" @click="sortData('instData'); showIcon();">
-              <v-icon v-if="!isHidden"> {{ iconData("instData") }}</v-icon
-              >TAKSİT
-            </th>
-            <th class="text-left" @click="sortData('payData'); showIcon();">
-              <v-icon v-if="!isHidden"> {{ iconData("payData") }}</v-icon
-              >PEŞİNAT
+              <v-icon v-if="item.isVisible"> {{ iconData(item.type) }}</v-icon>
+              {{ item.name }}
             </th>
           </tr>
         </thead>
@@ -70,14 +65,17 @@ export default {
         {
           name: "ÖDENECEK TUTAR",
           type: "debt",
+          isVisible: false,
         },
         {
           name: "TAKSİT",
           type: "instData",
+          isVisible: false,
         },
         {
           name: "PEŞİNAT",
           type: "payData",
+          isVisible: false,
         },
       ],
     };
@@ -96,18 +94,19 @@ export default {
         console.log(this.sort);
       }
     },
-    showIcon() {
-      // if(this.isHidden){
-      // this.isHidden = false
-      // }
-      (this.isHidden = this.isHidden == true ? false : false),
-        console.log("ne", this.isHidden);
+    showIcon(index) {
+      this.sortArr[index].isVisible = true;
+      this.sortArr.map((item, itemIndex) => {
+        if (index != itemIndex) {
+          item.isVisible = false;
+        }
+      });
     },
     iconData(value) {
       if (this.sortType == value && this.sort) {
-        return "mdi-arrow-up";
-      } else {
         return "mdi-arrow-down";
+      } else {
+        return "mdi-arrow-up";
       }
     },
   },

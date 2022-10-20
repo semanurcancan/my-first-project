@@ -125,6 +125,13 @@
       "instData": 6,
       "payData": 650,
       "id": 22
+    },
+    {
+      "name": "YAVUZ YILDIZ",
+      "debt": 56789,
+      "instData": 8,
+      "payData": 5768,
+      "id": 23
     }
   ],
   "semanur": [
