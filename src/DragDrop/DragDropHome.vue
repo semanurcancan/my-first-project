@@ -12,14 +12,15 @@
               draggable="true">
               <ul class="ıtemList" v-for="item in cardList" :key="item.id">
                 <li class="cardItem">
-                  <a href="#" class="line"> {{ item.text }} </a>
+                  <a href="#" class="line"> {{ item.text }} {{item.id}} </a>
                   <button class="hi"><v-icon> mdi-pen </v-icon></button>
                 </li>
               </ul>
               <v-col>
                 <div>
-                  <v-btn elevation="2" class="btnAdd"
-                    ><v-icon>mdi-plus</v-icon>add Card</v-btn
+                  <input type="text" v-model="text">
+                  <v-btn elevation="2" class="btnAdd" @click="addCard"
+                    ><v-icon>mdi-plus</v-icon>add item</v-btn
                   >
                 </div>
               </v-col>
@@ -38,16 +39,23 @@
 // import { ref } from "vue";
 export default {
   name: "DragDrop",
+  text:"",
   data() {
     return {
       cardList: [
-        { id: 1, text: "görev 1" },
-        { id: 2, text: "görev 2" },
-        { id: 3, text: "görev 3" },
+        { id: 1, text: "item 1" },
+        { id: 2, text: "item 2" },
+        { id: 3, text: "item 3" },
       ],
       drag: false,
     };
   },
+  methods:{
+    addCard(){
+      this.cardList.push({id: new Date().getSeconds, text: this.text})
+      return 
+    }
+  }
 };
 </script>
 
@@ -86,6 +94,7 @@ export default {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  
 }
 .line {
   text-decoration: none;
