@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .grid {
   border: 2px solid lightblue;
   box-shadow: 0px 5px 8px #8958fab2;

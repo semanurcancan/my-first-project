@@ -79,7 +79,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .cardContainer {
   height: auto;
   width: 600px;

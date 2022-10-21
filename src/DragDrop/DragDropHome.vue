@@ -3,59 +3,116 @@
     <v-toolbar theme="dark" class="header">DRAG & DROP</v-toolbar>
     <br />
     <main class="xx">
-      <v-row>
-        <v-col>
-          <v-card class="card">
-            <v-col>
-              <div>
-                <ul>
-                  <li class="cardItem">Card Item</li>
-                </ul>
-              </div>
-            </v-col>
-          </v-card>
-        </v-col>
-        <!-- <v-col>
-       <v-card class="card">
+      <div>
+        <v-row class="cardDes">
           <v-col>
-            <v-row>card 2</v-row>
-            <v-row>görev-1</v-row>
-            <v-row>görev-1</v-row>
+            <v-card
+              class="dropzone"
+              id="draggable"
+              draggable="true">
+              <ul class="ıtemList" v-for="item in cardList" :key="item.id">
+                <li class="cardItem">
+                  <a href="#" class="line"> {{ item.text }} </a>
+                  <button class="hi"><v-icon> mdi-pen </v-icon></button>
+                </li>
+              </ul>
+              <v-col>
+                <div>
+                  <v-btn elevation="2" class="btnAdd"
+                    ><v-icon>mdi-plus</v-icon>add Card</v-btn
+                  >
+                </div>
+              </v-col>
+            </v-card>
           </v-col>
-        </v-card>
-     </v-col> -->
-      </v-row>
+
+          <v-btn elevation="2" class="btnAdd2"
+            ><v-icon>mdi-plus</v-icon>Add Another List</v-btn
+          >
+        </v-row>
+      </div>
     </main>
   </div>
 </template>
 <script>
+// import { ref } from "vue";
 export default {
   name: "DragDrop",
+  data() {
+    return {
+      cardList: [
+        { id: 1, text: "görev 1" },
+        { id: 2, text: "görev 2" },
+        { id: 3, text: "görev 3" },
+      ],
+      drag: false,
+    };
+  },
 };
 </script>
 
 <style scoped>
+.active-dropzone {
+  color: #fff;
+  border-color: #fff;
+  background-color: #9670f0;
+}
 .header {
   display: flex;
   justify-content: space-around;
 }
 .container {
-  background-color: rgb(195, 173, 230);
+  background-color: rgb(218, 203, 241);
   height: 100%;
   width: 100%;
 }
-.xx {
-  margin: 30px;
-}
-.card {
+.dropzone {
   width: 15rem;
   height: 20rem;
+}
+.xx {
+  margin: 30px;
+  overflow: hidden;
+}
+.cardDes {
+  display: inline-flex;
 }
 .cardItem {
   background-color: whitesmoke;
   list-style: none;
-  box-shadow: 2px;
+  box-shadow: 0px 3px 7px #b79ef3;
   border-radius: 3px;
-  border: 1px solid rgba(126, 126, 126, 0.712);
+  border: 1px solid #d6c9f5;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.line {
+  text-decoration: none;
+  color: gray;
+}
+.ıtemList {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.cardItem:hover {
+  background-color: #e1d8f7a1;
+}
+.btnAdd {
+  font-size: 10px;
+  height: 30px;
+  width: 90px;
+}
+.btnAdd2 {
+  font-size: 10px;
+  height: 30px;
+  width: 130px;
+  margin-top: 12px;
+  color: #9670f0;
+  background: transparent;
+}
+.btnAdd2:hover {
+  background-color: #e9e5f3;
 }
 </style>

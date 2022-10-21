@@ -75,7 +75,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .title {
   text-align: center;
   font-size: 20px;

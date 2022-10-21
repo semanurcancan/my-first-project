@@ -49,7 +49,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .table {
   background-color: rgba(245, 245, 245, 0.267);
   border: 2px solid rgb(195, 173, 230);
