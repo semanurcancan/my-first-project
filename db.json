@@ -14,12 +14,13 @@
       "instData": 2,
       "payData": 400
     },
+
     {
-      "name": "AHMET YILMAZ",
-      "debt": 2000,
-      "id": 3,
-      "instData": 7,
-      "payData": 300
+      "name": "mehmet YILMAZ",
+      "debt": 3000,
+      "id": 16,
+      "instData": 2,
+      "payData": 500
     },
     {
       "name": "AHMET YILGIN",
