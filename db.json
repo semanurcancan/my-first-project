@@ -71,6 +71,7 @@
       "id": 14
     },
     {
+<<<<<<< Updated upstream
       "name": "AYŞEGÜL GÜNEŞ",
       "debt": 3670,
       "instData": 8,
@@ -139,6 +140,13 @@
       "instData": 8,
       "payData": 7868,
       "id": 24
+=======
+      "name": "yıldız kenter",
+      "debt": 4500,
+      "instData": 4,
+      "payData": 300,
+      "id": 15
+>>>>>>> Stashed changes
     }
   ],
   "semanur": [
