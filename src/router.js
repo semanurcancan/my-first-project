@@ -21,6 +21,12 @@ const routes = [
     path: "/DragDrop", //nasıl gıdecek
     component: () => import("./DragDrop/DragDropHome.vue"), //bunu ne karşılayacak
   },
+  {
+    name: "MiniDrag",
+    path: "/MiniDrag", //nasıl gıdecek
+    component: () => import("./DragDrop/miniDrag.vue"), //bunu ne karşılayacak
+  },
+
 
 
   {

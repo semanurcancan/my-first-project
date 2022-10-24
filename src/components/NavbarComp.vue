@@ -17,6 +17,9 @@
        <router-link class="nav-link" active-class="active" to="/DragDrop"
         >DRAG & DROP</router-link
       >
+      <router-link class="nav-link" active-class="active" to="/MiniDrag"
+        >mini</router-link
+      >
     </v-toolbar>
   </nav>
 </template>
