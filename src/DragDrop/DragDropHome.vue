@@ -21,34 +21,32 @@
           <v-toolbar>
             <v-icon>mdi-drag-vertical</v-icon> {{ item.title }}</v-toolbar
           >
-          <v-card >
-              <div :id="33" class="board" @drop.prevent="drop"
-              @dragover.prevent>
-                <ul  @dragover="dragOver" @drop.prevent="drop"
-              class="itemList"
-              v-for="item1 in item.itemList"
-              :key="item1.id"
-              id="10"
-            >
-  
-              <li class="draggable"
-                :id="item1.id"
-                draggable="true"
-                @dragstart="dragStart"
-                @dragover.stop
-                @dragend="dragEnd"
-                
+          <v-card>
+            <div :id="33" class="board" @drop.prevent="drop" @dragover.prevent>
+              <ul
+                @dragover="dragOver"
+                @drop.prevent="drop"
+                class="itemList"
+                v-for="item1 in item.itemList"
+                :key="item1.id"
+                id="10"
               >
-                <div class="line">
-                  <v-icon>mdi-drag-vertical</v-icon> {{ item1.text }}
-                </div>
-          <v-icon> mdi-pen </v-icon>
-                  
-                
-              </li>
-            </ul>
-              </div>
-            
+                <li
+                  class="draggable"
+                  :id="item1.id"
+                  draggable="true"
+                  @dragstart="dragStart"
+                  @dragover.stop
+                  @dragend="dragEnd"
+                >
+                  <div class="line">
+                    <v-icon>mdi-drag-vertical</v-icon> {{ item1.text }}
+                  </div>
+                  <v-icon> mdi-pen </v-icon>
+                </li>
+              </ul>
+            </div>
+
             <v-col>
               <hr />
               <div>
@@ -184,22 +182,22 @@ export default {
   margin-top: 15px;
   display: inline-flex;
 }
-.board{
+.board {
   height: 190px;
   margin: 10px;
-    margin: 15px;
-    overflow: auto;
-
+  margin: 10px;
+  overflow: auto;
 }
 .draggable {
   background-color: whitesmoke;
   list-style: none;
-  box-shadow: 0px 3px 7px #b79ef3;
+  box-shadow: 3px 3px 7px #b79ef3;
   border-radius: 3px;
   border: 1px solid #d6c9f5;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  margin-top: 10px;
   height: 40px;
 }
 
@@ -207,7 +205,6 @@ export default {
   text-decoration: none;
   color: gray;
   display: flex;
- 
 }
 
 .itemList {

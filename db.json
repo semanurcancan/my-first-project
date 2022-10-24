@@ -14,7 +14,6 @@
       "instData": 2,
       "payData": 400
     },
-
     {
       "name": "mehmet YILMAZ",
       "debt": 3000,
@@ -133,6 +132,27 @@
       "instData": 8,
       "payData": 5768,
       "id": 23
+    },
+    {
+      "name": "SALIH GENC",
+      "debt": 67899,
+      "instData": 8,
+      "payData": 678,
+      "id": 24
+    },
+    {
+      "name": "HIKMET AKZ",
+      "debt": 6789,
+      "instData": 3,
+      "payData": 798,
+      "id": 25
+    },
+    {
+      "name": "ZEHRA SÜREN",
+      "debt": 878787,
+      "instData": 7,
+      "payData": 798,
+      "id": 26
     }
   ],
   "semanur": [
