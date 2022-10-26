@@ -43,7 +43,7 @@ const store = createStore({
   },
   actions: {
     setUsers(context) {
-      axios.get("http://localhost:3000/debts").then((items) => {
+      axios.get("/debts").then((items) => {
         context.commit("setUsers", items.data);
       });
     },
