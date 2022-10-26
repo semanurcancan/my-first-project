@@ -107,7 +107,7 @@ export default {
   },
   computed: {
     filtered() {
-      if (this.searchText.length >= 2) {
+      if (this.searchText.length >= 1) {
         const fixSearchText = this.searchText.toLowerCase().trim();
         return this.debtList.filter((item) =>
           item.name.toLowerCase().trim().includes(fixSearchText)

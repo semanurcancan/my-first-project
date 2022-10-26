@@ -17,27 +17,27 @@
     <br />
     <main class="xx">
       <v-row class="cardDes" v-for="item in cardList" :key="item.id">
-        <v-col>
-          <v-toolbar>
+        <v-col class="coll">
+          <v-toolbar class="title">
             <v-icon>mdi-drag-vertical</v-icon> {{ item.title }}</v-toolbar
           >
-          <v-card>
-            <div :id="33" class="board" @drop.prevent="drop" @dragover.prevent>
+          <v-card class="card">
+            <div :id="33" class="board">
               <ul
-                @dragover="dragOver"
+                draggable="true"
                 @drop.prevent="drop"
+                @dragover.prevent
                 class="itemList"
-                v-for="item1 in item.itemList"
-                :key="item1.id"
-                id="10"
               >
+                <li></li>
                 <li
+                  v-for="item1 in item.itemList"
+                  :key="item1.id"
                   class="draggable"
                   :id="item1.id"
                   draggable="true"
                   @dragstart="dragStart"
                   @dragover.stop
-                  @dragend="dragEnd"
                 >
                   <div class="line">
                     <v-icon>mdi-drag-vertical</v-icon> {{ item1.text }}
@@ -47,15 +47,14 @@
               </ul>
             </div>
 
-            <v-col>
+            <v-col >
               <hr />
               <div>
                 <input type="text" v-model="text" placeholder="item..." />
                 <v-btn
                   elevation="2"
                   class="btnAdd"
-                  @click="addItem(item.id, text)"
-                >
+                  @click="addItem(item.id, text)">
                   <v-icon>mdi-plus</v-icon>add item
                 </v-btn>
               </div>
@@ -73,12 +72,12 @@ export default {
   name: "DragDrop",
   vmodelArr: [0, 1, 2, 6, 7],
   cardList: [],
+
   data() {
     return {
       cardList: [
         {
-          title: "card Title 1",
-          id: -1,
+          title: "card Title 1", 
           itemList: [
             { id: 1, text: "item 1" },
             { id: 2, text: "item 2" },
@@ -98,6 +97,10 @@ export default {
     };
   },
   methods: {
+    sortable(){
+      var itemList = document.querySelector("itemList")
+      new this.sortable(itemList, {Animation:500})
+    },
     addCard() {
       this.cardList.push({
         title: this.title,
@@ -123,6 +126,7 @@ export default {
     dragStart: (e) => {
       const target = e.target;
       e.dataTransfer.setData("CardId", target.id);
+
       setTimeout(() => {
         target.style.display = "none";
       }, 0);
@@ -157,16 +161,6 @@ export default {
   height: 100%;
   width: 100%;
 }
-.scroll-off {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  max-height: 100vh;
-  overflow: hidden;
-  padding-bottom: 1px;
-}
 
 .dropzone {
   width: 15rem;
@@ -176,40 +170,53 @@ export default {
 .xx {
   margin: 30px;
 }
-
+.card {
+  height: 280px;
+  width: 230px;
+}
+/*card*/
 .cardDes {
   margin-right: 8px;
   margin-top: 15px;
   display: inline-flex;
+ 
 }
 .board {
-  height: 190px;
-  margin: 10px;
-  margin: 10px;
+  /* div*/
+  height: 200px;
+  margin: 0px;
   overflow: auto;
+  /* background-color: yellowgreen; */
 }
+/* ul */
+.itemList {
+  display: flex;
+  flex-direction: column;
+  /* background-color: yellow; */
+  padding-top: 1px;
+  height: 100%;
+}
+/* li */
 .draggable {
   background-color: whitesmoke;
   list-style: none;
-  box-shadow: 3px 3px 7px #b79ef3;
   border-radius: 3px;
   border: 1px solid #d6c9f5;
+  box-shadow: 3px 3px 7px #b79ef3;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  height: 40px;
+  margin-top: 20px;
+  height: 25px;
+  cursor: pointer;
 }
-
+.title {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
 .line {
   text-decoration: none;
   color: gray;
   display: flex;
-}
-
-.itemList {
-  display: flex;
-  flex-direction: column;
 }
 
 .cardItem:hover {
@@ -217,9 +224,9 @@ export default {
 }
 
 .btnAdd {
-  font-size: 10px;
-  height: 30px;
-  width: 90px;
+  font-size: 8px;
+  height: 20px;
+  width: 70px;
 }
 
 .btnAdd2 {
